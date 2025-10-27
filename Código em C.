@@ -1,0 +1,80 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<locale.h>
+
+
+int main(){
+
+  
+    char nome_animal[30]; //um vetor com tamanho 30
+
+    int quant_animal;
+
+    float custo_comida_kilo;
+
+    float quant_comida_dia;
+
+
+    float custo_dia;
+
+    float quant_comida_mes;
+
+    float custo_mes;
+
+    
+
+   setlocale(LC_ALL,"portuguese");
+
+   printf("informe o nome do animal : Nome = ");
+
+   scanf("%s",nome_animal);
+
+   printf("Informe a quantidade deste animal no zoológico: n = ");
+
+   scanf("%d",&quant_animal);
+
+    printf("Digite o custo estimado por kilo de comida: R$ ");
+
+    scanf("%f",&custo_comida_kilo);
+
+    printf("Digite a quantidade de comida deste animal consumida por dia(kg): ");
+
+   scanf("%f",&quant_comida_dia);
+
+   
+
+   //Calculos
+
+   custo_dia = quant_animal * custo_comida_kilo * quant_comida_dia;
+
+   quant_comida_mes = quant_animal * quant_comida_dia * 30;
+
+   custo_mes = custo_dia * 30;
+
+  
+
+  //Resultados: 
+
+   printf("Para animal %s \n",nome_animal);
+
+   printf ("Custo estimado por dia: R$ %.2f\n",custo_dia);
+
+   printf("Quantidade de comida consumida pelo animal por mes  (kg): %.2f\n",quant_comida_mes);
+
+   printf("Custo estimado por mes: R$ %.2f\n",custo_mes);
+
+   
+
+   
+
+   
+
+   system("pause");
+
+   return 0; 
+
+    
+
+}
